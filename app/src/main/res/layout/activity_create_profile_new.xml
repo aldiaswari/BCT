@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/Login_form"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <ViewFlipper
+        android:id="@+id/viewflipper"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="40dp">
+
+            <RelativeLayout android:layout_width="match_parent" android:layout_height="match_parent">
+                <ImageView android:layout_gravity="center" android:background="@color/colorgradient" android:paddingTop="20dp" android:layout_width="match_parent" android:layout_height="250dp" android:layout_marginBottom="10dp" android:src="@drawable/bg_map_sit" android:scaleType="centerCrop" android:layout_alignParentTop="true" android:layout_centerVertical="true"/>
+                <RelativeLayout android:id="@+id/rlnotif" android:background="@color/red" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_below="@+id/toolbar">
+                    <customfonts.TextViewSFProDisplayRegular android:textColor="@color/white" android:id="@+id/textnotif" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="10dp" android:layout_centerInParent="true"/>
+                </RelativeLayout>
+
+                <RelativeLayout android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginLeft="15dp" android:layout_marginTop="235dp" android:layout_marginRight="15dp">
+                    <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+                        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="10dp">
+                            <LinearLayout android:background="@drawable/round_edittext_background" android:layout_width="match_parent" android:layout_height="40dp">
+                                <customfonts.TextViewSFProDisplayMedium android:textSize="15dp" android:textColor="@color/black" android:gravity="center" android:id="@+id/countrycode" android:layout_width="80dp" android:layout_height="wrap_content" android:text="+62" android:textAlignment="center"/>
+                                <View android:background="@color/dark_gray" android:layout_width="0.1dp" android:layout_height="match_parent" android:layout_marginTop="5dp" android:layout_marginBottom="5dp" android:layout_toRightOf="@+id/countrycode"/>
+                                <customfonts.EditTextSFProDisplayRegular android:textSize="15dp" android:textColor="@color/black" android:textColorHint="@color/gray" android:id="@+id/create_profile_phone_editText" android:background="@color/transparent" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginLeft="10dp" android:layout_marginRight="10dp" android:hint="@string/hint_phone" android:layout_toRightOf="@+id/countrycode" android:inputType="phone"/>
+                            </LinearLayout>
+                            <LinearLayout  android:background="@drawable/round_edittext_background" android:layout_width="match_parent" android:layout_height="40dp" android:layout_marginTop="10dp">
+                                <ImageView android:layout_gravity="center" android:layout_width="80dp" android:layout_height="15dp" android:src="@drawable/ic_person_pin" android:tint="@color/black" android:layout_centerVertical="true"/>
+                                <View android:background="@color/dark_gray" android:layout_width="0.1dp" android:layout_height="match_parent" android:layout_marginTop="5dp" android:layout_marginBottom="5dp" android:layout_toRightOf="@+id/countrycode"/>
+
+                                <customfonts.EditTextSFProDisplayRegular
+                                    android:id="@+id/create_profile_name_editText"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginLeft="10dp"
+                                    android:layout_marginRight="10dp"
+                                    android:layout_toRightOf="@+id/countrycode"
+                                    android:background="@color/transparent"
+                                    android:hint="Nama"
+                                    android:inputType="textPersonName"
+                                    android:textColor="@color/black"
+                                    android:textColorHint="@color/gray"
+                                    android:textSize="15dp" />
+                            </LinearLayout>
+                            <customfonts.TextViewSFProDisplayMedium android:textSize="14dp" android:textColor="@color/colorgradient" android:gravity="center" android:id="@+id/masukannomor" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="20dp" android:layout_marginBottom="10dp" android:text="@string/create_profile_anda" />
+
+                            <customfonts.TextViewSFProDisplayMedium android:textSize="14dp" android:textColor="@color/colorgradient" android:gravity="center" android:id="@+id/lupapass" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="20dp" android:layout_marginBottom="10dp" android:text="@string/lupa" android:visibility="gone"/>
+                            <customfonts.Button_SF_Pro_Display_Medium android:textSize="18dp" android:textColor="@color/white" android:id="@+id/create_profile_button" android:background="@drawable/button_round_1" android:layout_width="match_parent" android:layout_height="40dp" android:layout_marginTop="10dp" android:text="@string/button_create_ok" android:textAllCaps="false"/>
+                            <RelativeLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerHorizontal="true">
+                                <customfonts.TextViewSFProDisplayRegular android:textSize="14dp" android:textColor="@color/black" android:gravity="center" android:id="@+id/privacypolice" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="15dp" android:lineSpacingExtra="5dp"/>
+                            </RelativeLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+                </RelativeLayout>
+            </RelativeLayout>
+        </ScrollView>
+        <include layout="@layout/verifycode"/>
+    </ViewFlipper>
+    <ImageView android:id="@+id/back_btn" android:background="@drawable/round_edittext_background" android:padding="10dp" android:layout_width="40dp" android:layout_height="40dp" android:layout_marginLeft="15dp" android:layout_marginTop="15dp" android:layout_marginBottom="15dp" android:src="@drawable/ic_back" android:tint="@color/black" android:layout_alignParentLeft="true"/>
+    <RelativeLayout android:gravity="center" android:id="@+id/rldaftar" android:background="@color/white" android:layout_width="match_parent" android:layout_height="40dp" android:layout_alignParentBottom="true">
+        <customfonts.TextViewSFProDisplayRegular android:textSize="18dp" android:textColor="@color/black" android:id="@+id/textdaftar" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/button_dontHaveAccount" android:visibility="gone" android:layout_alignParentBottom="true" android:textAlignment="center"/>
+        <customfonts.TextViewSFProDisplayMedium android:textSize="18dp" android:textColor="@color/colorgradient" android:id="@+id/clickdaftar" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/button_signUp" android:visibility="gone" android:layout_toRightOf="@+id/textdaftar" android:layout_alignParentBottom="true" android:textAlignment="center"/>
+    </RelativeLayout>
+    <RelativeLayout android:id="@+id/rlprogress" android:background="@color/transparentblack" android:visibility="gone" android:clickable="true" android:layout_width="match_parent" android:layout_height="match_parent">
+        <de.hdodenhof.circleimageview.CircleImageView android:id="@+id/profileimage" android:layout_width="100dp" android:layout_height="100dp" android:src="@color/white" android:layout_centerInParent="true"/>
+        <ProgressBar android:layout_width="120dp" android:layout_height="120dp" android:layout_centerInParent="true"/>
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@+id/lllogo" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_centerInParent="true">
+            <ImageView android:id="@+id/logo" android:layout_width="50dp" android:layout_height="50dp" android:src="@drawable/bct"/>
+        </LinearLayout>
+    </RelativeLayout>
+    <ProgressBar
+        android:id="@+id/create_profile_progressBar"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_gravity="bottom|center_vertical|center_horizontal|center"
+        android:layout_marginBottom="20dp"
+        android:visibility="gone" />
+</RelativeLayout>

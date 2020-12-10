@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:orientation="vertical" android:background="@color/Apptheme_gojek_light_gray" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_margin="5dp" android:weightSum="10">
+    <RelativeLayout android:id="@+id/jobs_job_bid_header" android:background="@color/Apptheme_gojek_black" android:paddingLeft="8dp" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="2.8">
+        <TextView android:textColor="#ffffff" android:id="@+id/jobs_job_ad_distance_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="8dp" android:text="@string/jobs_job_distance_title" android:layout_alignParentRight="true"/>
+        <TextView android:textColor="@color/Apptheme_gojek_green" android:id="@+id/total_distance" android:paddingRight="8dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/jobs_default_distance" android:layout_below="@+id/jobs_job_ad_distance_title" android:layout_alignParentRight="true"/>
+        <TextView android:textColor="@color/Apptheme_gojek_green" android:id="@+id/tv_poin" android:paddingRight="8dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="1 Point" android:layout_below="@+id/total_price" android:layout_alignParentRight="true"/>
+        <RelativeLayout android:id="@+id/relativeLayout" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true">
+            <ImageView android:id="@+id/jobs_job_ad_icon" android:paddingTop="10dp" android:paddingBottom="10dp" android:layout_width="60dp" android:layout_height="60dp" android:contentDescription="@string/default_icon_description"/>
+            <TextView android:textSize="20sp" android:textStyle="bold" android:textColor="@color/Apptheme_gojek_green" android:id="@+id/job_type" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="ORDER" android:layout_alignBottom="@+id/jobs_job_ad_icon" android:layout_alignParentLeft="true"/>
+        </RelativeLayout>
+        <TextView android:textColor="#ffffff" android:id="@+id/jobs_job_ad_total_fee_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/jobs_job_total_fee_title" android:layout_alignParentLeft="true"/>
+        <TextView android:textColor="#ff0000" android:id="@+id/total_price" android:paddingTop="2dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/jobs_default_price" android:layout_below="@+id/jobs_job_ad_total_fee_title"/>
+        <TextView android:textColor="#ffffff" android:id="@+id/jobs_job_ad_total_shop_price" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="PEMBAYARAN" android:layout_alignTop="@+id/relativeLayout" android:layout_centerHorizontal="true"/>
+        <TextView android:textColor="#ffffff" android:id="@+id/payment_type" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="GOPAY" android:layout_below="@+id/jobs_job_ad_total_shop_price" android:layout_centerHorizontal="true"/>
+    </RelativeLayout>
+    <RelativeLayout android:id="@+id/jobs_job_list_container" android:background="@color/light_grey_subtitle" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="2.2">
+        <RelativeLayout android:layout_width="match_parent" android:layout_height="match_parent">
+            <LinearLayout android:orientation="horizontal" android:id="@+id/jobs_job_address_container" android:layout_width="match_parent" android:layout_height="match_parent" android:baselineAligned="false" android:weightSum="100">
+                <RelativeLayout android:id="@+id/jobs_job_address_origin_container" android:background="@color/grey_address_origin" android:padding="8dp" android:paddingRight="12dp" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="50">
+                    <TextView android:textSize="14sp" android:textColor="#ff999999" android:gravity="left" android:id="@+id/job_pickup_title" android:paddingTop="3dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/jobs_new_job_label_origin"/>
+                    <TextView android:textColor="#ffffff" android:gravity="left" android:id="@+id/job_pickup_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Setiabudi Building" android:layout_below="@+id/job_pickup_title"/>
+                    <TextView android:textColor="#ffffff" android:gravity="left" android:id="@+id/job_pickup_address" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Kincan Raya" android:layout_below="@+id/job_pickup_name"/>
+                </RelativeLayout>
+                <RelativeLayout android:id="@+id/jobs_job_address_destination_container" android:background="@color/grey_address_destination" android:padding="8dp" android:paddingLeft="12dp" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="50">
+                    <TextView android:textSize="14sp" android:textColor="#ff999999" android:gravity="right" android:id="@+id/job_destination_title" android:paddingTop="3dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/jobs_new_job_label_destination" android:layout_alignParentRight="true"/>
+                    <TextView android:textColor="#ffffff" android:gravity="right" android:id="@+id/job_destination_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Kantor Gojek" android:layout_below="@+id/job_destination_title" android:layout_alignParentRight="true"/>
+                    <TextView android:textColor="#ffffff" android:gravity="right" android:id="@+id/job_destination_address" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Jl. SIT Team" android:layout_below="@+id/job_destination_name" android:layout_alignParentRight="true"/>
+                </RelativeLayout>
+            </LinearLayout>
+            <TextView android:textSize="12sp" android:textStyle="italic" android:textColor="#ffffff" android:gravity="center" android:layout_width="25dp" android:layout_height="25dp" android:layout_marginTop="30dp" android:text="@string/jobs_new_job_label_to" android:layout_centerHorizontal="true"/>
+            <RelativeLayout android:id="@+id/jobs_job_multi_divider" android:background="@color/Apptheme_gojek_black" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_below="@+id/jobs_job_address_container">
+                <TextView android:textSize="12sp" android:textStyle="normal" android:textColor="@color/light_grey_subtitle" android:gravity="center" android:id="@+id/jobs_job_ad_trip_type" android:paddingTop="2dp" android:paddingBottom="2dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/single_trip" android:layout_centerInParent="true"/>
+            </RelativeLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+    <RelativeLayout android:id="@+id/jobs_job_timer_container" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="2.3">
+        <ImageView android:id="@+id/imageView4" android:layout_width="130dp" android:layout_height="match_parent" android:layout_above="@+id/txtWaitTimeInfo" android:layout_centerHorizontal="true" app:srcCompat="@drawable/bct"/>
+        <TextView android:textSize="13sp" android:textColor="@color/black" android:gravity="center" android:id="@+id/txtWaitTimeInfo" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:text="Klik Tombol di bawah jika anda setuju mengambil booking ini" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true"/>
+    </RelativeLayout>
+    <LinearLayout android:orientation="vertical" android:id="@+id/jobs_job_bid_footer" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="2.5">
+        <Button android:id="@+id/job_accept_btn" android:background="@color/Apptheme_gojek_green" android:layout_width="match_parent" android:layout_height="35dp" android:layout_marginTop="5dp" android:text="@string/jobs_new_job_bid_button"/>
+        <Button android:id="@+id/job_reject_btn" android:background="#ff0000" android:layout_width="match_parent" android:layout_height="35dp" android:layout_marginTop="8dp" android:text="TOLAK"/>
+    </LinearLayout>
+</LinearLayout>

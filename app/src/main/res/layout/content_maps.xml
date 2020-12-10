@@ -1,0 +1,438 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fab="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    android:id="@+id/root_layout"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <include layout="@layout/activity_maps" />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginTop="40.0dip"
+        android:gravity="left"
+        android:orientation="vertical"
+        android:weightSum="1.0">
+
+        <ImageView
+            android:id="@+id/ic_start"
+            android:layout_width="40dp"
+            android:visibility="gone"
+            android:layout_height="40dp"
+            android:layout_gravity="top|left"
+            android:layout_marginStart="15dip"
+            android:layout_marginLeft="15dip"
+            android:layout_marginTop="40dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:src="@drawable/ic_play" />
+
+        <ImageView
+            android:id="@+id/ic_pause"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="15.0dip"
+            android:layout_marginLeft="15.0dip"
+            android:layout_marginTop="40dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:src="@drawable/ic_pause"
+            android:visibility="gone" />
+
+        <net.colindodd.toggleimagebutton.ToggleImageButton
+            android:id="@+id/toggleButton4"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginBottom="30dp"
+
+            app:tib_drawable_off="@drawable/ic_play"
+            app:tib_drawable_on="@drawable/ic_pause" />
+
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:layout_marginTop="120dp"
+        android:layout_marginRight="10dp"
+        android:gravity="right"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/ic_zoom"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:onClick="zoomMin"
+            android:layout_marginBottom="10dp"
+            android:src="@drawable/plus" />
+
+        <ImageView
+            android:id="@+id/ic_zoomout"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:onClick="zoomOut"
+            android:layout_marginBottom="20dp"
+            android:src="@drawable/minus_a" />
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|right"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="100dp"
+        android:gravity="right"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/ic_delete_location"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="10dp"
+            android:onClick="clear"
+          />
+
+        <ImageView
+            android:id="@+id/ic_history"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/ic_histo" />
+
+        <ImageView
+            android:id="@+id/ic_fav"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="10dp"
+            />
+
+        <ImageView
+            android:id="@+id/ic_location"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="10dp"
+         />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_gravity="bottom"
+        android:layout_marginBottom="80dp"
+        android:background="@color/transparent"
+        android:layout_alignParentBottom="true"
+        android:layout_height="wrap_content">
+
+        <include layout="@layout/info_fake" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="210dp"
+        android:id="@+id/layout_gojek"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center"
+        android:background="@drawable/rounded_corners_button_red"
+        android:foregroundGravity="bottom"
+        android:visibility="visible"
+        android:gravity="bottom|center"
+        android:orientation="horizontal"
+        android:weightSum="1.0">
+
+        <ImageView
+            android:id="@+id/ic_gofood"
+            android:onClick="gfood"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="12dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:src="@drawable/ic_food" />
+
+        <ImageView
+            android:id="@+id/ic_bct"
+            android:layout_width="59dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="5dp"
+            android:onClick="bct"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:src="@drawable/bct" />
+
+        <ImageView
+            android:id="@+id/ic_goride"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="12dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:onClick="gjkDriv"
+            android:src="@drawable/ic_driver2" />
+
+
+        <!-- Adding bottom sheet after main content -->
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="210dp"
+        android:id="@+id/layout_grab"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center"
+
+        android:foregroundGravity="bottom"
+        android:gravity="bottom|center"
+        android:visibility="gone"
+        android:orientation="horizontal"
+        android:weightSum="1.0">
+
+        <ImageView
+            android:id="@+id/ic_grbfood"
+            android:onClick="grbfood"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="12dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:src="@drawable/ic_grbfood" />
+
+        <ImageView
+            android:id="@+id/ic_bct2"
+            android:layout_width="59dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="5dp"
+            android:onClick="bct"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="5dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:src="@drawable/bct" />
+
+        <ImageView
+            android:id="@+id/ic_grbbike"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="12dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:onClick="grbDrv"
+            android:src="@drawable/ic_bike" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="150dp"
+        android:visibility="gone"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/ic_gojek"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_below="@id/ic_pause"
+            android:layout_marginLeft="15.0dip"
+            android:layout_marginTop="10dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:onClick="gjk"
+            android:src="@drawable/ic_gojek"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/ic_shop"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_below="@id/search_gf"
+            android:layout_marginLeft="15.0dip"
+            android:layout_marginTop="40dp"
+            android:contentDescription="search lcoation"
+            />
+
+
+        <ImageView
+            android:id="@+id/search_gf"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="15.0dip"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/search_ic" />
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="65dp"
+
+        android:layout_height="match_parent"
+        android:layout_gravity="left|center"
+        android:gravity="left"
+
+        android:layout_marginTop="20dp"
+        android:orientation="vertical">
+
+        <com.github.clans.fab.FloatingActionMenu
+            android:id="@+id/goto_gojek2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="bottom|left|center_vertical|center_horizontal|center|start"
+            android:layout_marginTop="40dp"
+            android:layout_marginBottom="10dp"
+            android:foregroundGravity="left"
+            fab:fab_colorNormal="#313131"
+            fab:fab_colorPressed="#313131"
+            fab:fab_colorRipple="#99ffffff"
+            fab:fab_shadowColor="#66000000"
+            fab:fab_showShadow="true"
+            fab:menu_backgroundColor="#00ffffff"
+            fab:menu_fab_label="Choose an action"
+            fab:menu_labels_colorNormal="#333333"
+            fab:menu_labels_colorPressed="#444444"
+            fab:menu_labels_colorRipple="#313131"
+            fab:menu_labels_ellipsize="none"
+            fab:menu_labels_maxLines="-1"
+            fab:menu_labels_position="left"
+            fab:menu_labels_showShadow="true"
+            fab:menu_labels_singleLine="true"
+            fab:menu_openDirection="up">
+
+            <com.github.clans.fab.FloatingActionButton
+                android:id="@+id/fab1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_search_white_24dp"
+                fab:fab_label="Search"
+                fab:fab_size="mini" />
+
+            <com.github.clans.fab.FloatingActionButton
+                android:id="@+id/fabDataDriver"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:src="@drawable/ic_motorcycle_white_24dp"
+                fab:fab_label="Data Driver"
+                fab:fab_size="mini" />
+
+            <com.github.clans.fab.FloatingActionButton
+                android:id="@+id/fabToken"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:src="@drawable/ic_token_manual_24dp"
+                fab:fab_label="Token MAnual"
+                fab:fab_size="mini" />
+
+            <com.github.clans.fab.FloatingActionButton
+                android:id="@+id/fab2"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:src="@drawable/ic_shopping_24dp"
+                fab:fab_label="Shop Spot"
+                fab:fab_size="mini" />
+
+            <com.github.clans.fab.FloatingActionButton
+                android:id="@+id/fab3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_touch_login_24dp"
+                fab:fab_label="Login Customer"
+                fab:fab_size="mini" />
+
+            <com.github.clans.fab.FloatingActionButton
+                android:id="@+id/fab4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_heatmap_24dp"
+                fab:fab_label="Heat Map"
+                fab:fab_size="mini" />
+
+            <com.github.clans.fab.FloatingActionButton
+                android:id="@+id/fab5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_traffic_white_24dp"
+                fab:fab_label="Traffic Light"
+                fab:fab_size="mini" />
+        </com.github.clans.fab.FloatingActionMenu>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="65dp"
+
+        android:layout_height="match_parent"
+        android:layout_gravity="right|center"
+        android:gravity="right"
+
+        android:layout_marginTop="20dp"
+        android:orientation="vertical">
+
+        <com.github.clans.fab.FloatingActionMenu
+            android:id="@+id/goto_gojek"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="bottom|right|center_vertical|center_horizontal|center|start"
+            android:layout_marginTop="40dp"
+            android:layout_marginBottom="10dp"
+            android:foregroundGravity="right"
+            fab:fab_colorNormal="#313131"
+            fab:fab_colorPressed="#313131"
+            fab:fab_colorRipple="#99ffffff"
+            fab:fab_shadowColor="#66000000"
+            fab:fab_showShadow="true"
+            fab:menu_backgroundColor="#00ffffff"
+            fab:menu_fab_label="Choose an action"
+            fab:menu_labels_colorNormal="#333333"
+            fab:menu_labels_colorPressed="#444444"
+            fab:menu_labels_colorRipple="#313131"
+            fab:menu_labels_ellipsize="none"
+            fab:menu_labels_maxLines="-1"
+            fab:menu_labels_position="left"
+            fab:menu_labels_showShadow="true"
+            fab:menu_labels_singleLine="true"
+            fab:menu_openDirection="up">
+
+            <com.github.clans.fab.FloatingActionButton
+                android:id="@+id/fabSetting"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_settings_white_24dp"
+                fab:fab_label="Gojek Preferences"
+                fab:fab_size="mini" />
+
+            <com.github.clans.fab.FloatingActionButton
+                android:id="@+id/fabHisto"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:src="@drawable/ic_history_white_24dp"
+                fab:fab_label="History"
+                fab:fab_size="mini" />
+
+            <com.github.clans.fab.FloatingActionButton
+                android:id="@+id/fabPickup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_pick_up_point_24dp"
+                fab:fab_label="Pickup Driver"
+                fab:fab_size="mini" />
+
+            <com.github.clans.fab.FloatingActionButton
+                android:id="@+id/fabGoto"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_edit_location_white_24dp"
+                fab:fab_label="GOTO Location"
+                fab:fab_size="mini" />
+
+            <com.github.clans.fab.FloatingActionButton
+                android:id="@+id/fabDelLoc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_location_offwhite_24dp"
+                fab:fab_label="Delete Location"
+                fab:fab_size="mini" />
+        </com.github.clans.fab.FloatingActionMenu>
+
+    </LinearLayout>
+</FrameLayout>

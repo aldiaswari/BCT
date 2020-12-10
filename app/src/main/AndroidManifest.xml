@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:dist="http://schemas.android.com/apk/distribution"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.google.bct">
+
+    <dist:module dist:instant="true" />
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.KILL_BACKGROUND_PROCESSES" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission
+        android:name="android.permission.READ_PRIVILEGED_PHONE_STATE"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.DISABLE_KEYGUARD" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.ACCESS_GPS" />
+    <uses-permission android:name="android.permission.ACCESS_MOCK_LOCATION"
+        tools:ignore="MockLocation,ProtectedPermissions" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_SUPERUSER" />
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="true" />
+
+    <application
+        android:name=".init.AppBase"
+        android:allowBackup="true"
+        android:hardwareAccelerated="false"
+        android:icon="@drawable/bct"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:roundIcon="@drawable/bct"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tools:ignore="GoogleAppIndexingWarning">
+        <receiver
+            android:name=".utils.MyReceiver"
+            android:enabled="true"
+            android:exported="true">
+
+        </receiver>
+
+        <activity
+            android:name=".ui.HideActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".ui.Auto"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".ui.DisplayHistoryActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".ui.LoginAct"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".ui.Reg"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".ui.AppHideConfigurationActivity" />
+        <activity
+            android:name=".ui.MainActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".ui.main"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <!--
+             The API key for Google Maps-based APIs is defined as a string resource.
+             (See the file "res/values/google_maps_api.xml").
+             Note that the API key is linked to the encryption key used to sign the APK.
+             You need a different API key for each encryption key, including the release key that is used to
+             sign the APK for publishing.
+             You can define the keys for the debug and release targets in src/debug/ and src/release/.
+        -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
+        <meta-data
+            android:name="io.fabric.ApiKey"
+            android:value="53f9402854520f86b92aabed725b99938b955ac5"
+            tools:replace="android:value" />
+
+        <service
+            android:name=".service.FloatingViewService"
+            android:enabled="true"
+            android:exported="true" />
+        <service
+            android:name=".service.LocationService"
+            android:enabled="true"
+            android:exported="true" />
+        <service
+            android:name=".service.Ping"
+            android:enabled="true"
+            android:exported="true" />
+        <service
+            android:name=".service.HService"
+            android:enabled="true"
+            android:exported="true" />
+        <service
+            android:name=".service.NoFuseService"
+            android:enabled="true"
+            android:exported="true" />
+
+        <receiver
+            android:name=".init.Brcast"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.goole.bct.ui.MainActivity" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name=".utils.Uub">
+            <intent-filter>
+                <action android:name="bct.intent.action.UPDATE_APP_VERSION" />
+                <action android:name="bct.intent.action.RECEIVE_ORDER" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name=".service.NoFuseService$MockServiceReceiver">
+            <intent-filter>
+                <action android:name="com.google.bct.NofuseService" />
+            </intent-filter>
+        </receiver>
+        <provider
+            android:name=".utils.Provider"
+            android:authorities="com.google.bct"
+            android:exported="true"/>
+        <meta-data
+            android:name="xposedmodule"
+            android:value="true" />
+        <meta-data
+            android:name="xposedminversion"
+            android:value="30" />
+        <meta-data
+            android:name="xposeddescription"
+            android:value="BACOT LU!!!" />
+    </application>
+
+</manifest>

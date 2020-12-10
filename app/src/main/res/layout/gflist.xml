@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:apc="http://schemas.android.com/apk/lib/com.root.rootcheck"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:padding="@dimen/activity_horizontal_margin">
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:drawableLeft="@drawable/ic_restaurant_menu_red_24dp"
+        android:paddingTop="6dp"
+        android:paddingBottom="2dp"
+        android:text=" BCT FAKE"
+        android:textColor="@color/red400"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/alamat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@drawable/ic_alamat_24dp"
+        android:paddingBottom="2dp"
+        android:text=" jl. bacot lu"
+        android:textColor="@color/black" />
+
+    <TextView
+        android:id="@+id/lokasi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@drawable/ic_pin_drop_white_24dp"
+        android:paddingBottom="2dp"
+        android:text=" 30.30"
+        android:textColor="@color/black" />
+</LinearLayout>

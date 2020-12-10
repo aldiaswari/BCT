@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/MainFragment" android:background="@color/white" android:fitsSystemWindows="true" android:layout_width="match_parent" android:layout_height="match_parent">
+    <View
+        android:id="@+id/view_fake"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:layout_width="0dp"
+        android:layout_height="0dp"/>
+    <RelativeLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <RelativeLayout android:id="@+id/rltoolbar"
+            android:visibility="visible"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:background="@color/white"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_alignParentTop="true"
+                app:contentInsetLeft="0dp"
+                app:contentInsetStart="0dp">
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="15dp">
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="35dp" android:src="@drawable/bct"/>
+                    <customfonts.TextViewSFProDisplayMedium
+                        android:textSize="25dp"
+                        android:gravity="center_vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:text="@string/app_name"/>
+                </LinearLayout>
+            </androidx.appcompat.widget.Toolbar>
+        </RelativeLayout>
+        <FrameLayout
+            android:id="@+id/Container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/navigation"
+            android:layout_below="@+id/rltoolbar"/>
+        <RelativeLayout
+            android:id="@+id/rlprogress"
+            android:background="@color/white"
+            android:visibility="gone"
+            android:clickable="true"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/navigation"
+            android:layout_below="@+id/rltoolbar">
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/profileimage"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@color/white"
+                android:layout_centerInParent="true"/>
+
+            <ProgressBar
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_centerInParent="true"/>
+            <LinearLayout
+                android:gravity="center"
+                android:orientation="vertical"
+                android:id="@+id/lllogo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true">
+                <ImageView
+                    android:id="@+id/logo"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/bct"/>
+            </LinearLayout>
+        </RelativeLayout>
+
+     <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:theme="@style/TextNavigation"
+            android:id="@+id/navigation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            app:itemBackground="@color/white"
+            app:itemTextColor="@color/selector"
+            app:labelVisibilityMode="labeled"
+            app:menu="@menu/navigation"/>
+
+        <!---         <fragment
+                  android:id="@+id/main_fragment"
+                  android:layout_width="match_parent"
+                  android:layout_height="0dp"
+                  android:name="androidx.navigation.fragment.NavHostFragment"
+                  app:defaultNavHost="true"
+                  app:navGraph='@navigation/nav_graph'
+                  app:layout_constraintBottom_toTopOf="@+id/bottomBar"
+                  app:layout_constraintEnd_toEndOf="parent"
+                  app:layout_constraintStart_toStartOf="parent"
+                  app:layout_constraintTop_toTopOf="parent" />
+
+              <me.ibrahimsn.lib.SmoothBottomBar
+                  android:id="@+id/bottomBar"
+                  android:layout_width="match_parent"
+                  android:layout_height="70dp"
+                  android:layout_alignParentBottom="true"
+                  android:layout_marginBottom="0dp"
+                  app:backgroundColor="@color/colorPrimary3"
+                  app:iconSize="24dp"
+                  app:iconTint="#C8FFFFFF"
+                  app:iconTintActive="#FFFFFF"
+                  app:indicatorColor="#2DFFFFFF"
+                  app:indicatorRadius="10dp"
+                  app:itemPadding="10dp"
+                  app:layout_constraintBottom_toBottomOf="parent"
+                  app:menu="@menu/menu_bottom"
+                  app:sideMargins="10dp"
+                  app:textColor="@color/white"
+                  app:textSize="14sp" />
+                   -->
+          </RelativeLayout>
+
+      </FrameLayout>

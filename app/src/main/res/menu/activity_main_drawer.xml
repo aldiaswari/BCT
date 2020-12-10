@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item android:icon="@drawable/ic_pin_drop_black_24dp" android:id="@+id/nav_fake" android:title="Fake"/>
+        <item android:icon="@drawable/ic_bid_24dp" android:id="@+id/nav_bid" android:title="Autobid"/>
+        <item android:icon="@drawable/ic_hide" android:id="@+id/nav_hide" android:title="Hide"/>
+    </group>
+    <item android:title="BCT">
+        <menu>
+            <item android:icon="@drawable/ic_signout_black_24dp" android:id="@+id/nav_signout" android:title="Sign Out"/>
+            <item android:icon="@drawable/ic_version_mode_black_24dp" android:id="@+id/nav_versi" android:title="Version 1.0"/>
+        </menu>
+    </item>
+
+
+</menu>

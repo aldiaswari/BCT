@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    android:orientation="vertical"
+    android:id="@+id/profilefragment"
+    android:background="@color/light_gray"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <ScrollView android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="8dp">
+        <LinearLayout android:orientation="vertical"
+            android:layout_width="match_parent" android:layout_height="wrap_content">
+            <LinearLayout android:orientation="vertical" android:background="@color/white" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="8dp">
+                <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="15dp">
+                    <RelativeLayout android:layout_width="60dp" android:layout_height="60dp">
+                        <de.hdodenhof.circleimageview.CircleImageView android:id="@+id/userphoto" android:layout_width="match_parent" android:layout_height="match_parent" android:src="@drawable/ic_logoutlist"/>
+                    </RelativeLayout>
+                    <LinearLayout android:orientation="vertical" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1">
+                        <customfonts.TextViewSFProDisplayMedium android:textSize="18dp" android:textColor="@color/black" android:id="@+id/username" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10dp" android:layout_marginRight="10dp" android:text="Stringinteger" android:textAllCaps="false"/>
+                        <customfonts.TextViewSFProDisplayRegular android:textSize="15dp" android:textColor="@color/black" android:id="@+id/useremail" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10dp" android:layout_marginRight="10dp" android:text="email@email.com" android:textAllCaps="false"/>
+                    </LinearLayout>
+                    <LinearLayout android:gravity="center" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                        <ImageView android:layout_gravity="center" android:layout_width="25dp" android:layout_height="25dp" android:src="@drawable/ic_logoutlist"/>
+                        <customfonts.TextViewSFProDisplayMedium android:textSize="20dp" android:textColor="@color/black" android:gravity="center_vertical" android:id="@+id/rate" android:layout_width="wrap_content" android:layout_height="match_parent" android:text="4.7"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:background="@color/white" android:padding="15dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="8dp">
+                <LinearLayout android:orientation="horizontal" android:id="@+id/lleditprofile" android:layout_width="match_parent" android:layout_height="40dp">
+                    <ImageView android:layout_gravity="center" android:layout_width="30dp" android:layout_height="30dp" android:src="@drawable/ic_logoutlist"/>
+                    <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="1">
+                        <customfonts.TextViewSFProDisplayMedium android:textSize="15dp" android:textColor="@color/black" android:gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_marginLeft="10dp" android:layout_marginRight="10dp" android:text="Edit Profile"/>
+                    </LinearLayout>
+                </LinearLayout>
+                <View android:background="@color/gray" android:layout_width="match_parent" android:layout_height="0.5dp" android:layout_marginLeft="40dp" android:layout_marginTop="5dp" android:layout_marginBottom="5dp"/>
+                <LinearLayout android:orientation="horizontal" android:id="@+id/llpassword" android:layout_width="match_parent" android:layout_height="40dp">
+                    <ImageView android:layout_gravity="center" android:layout_width="30dp" android:layout_height="30dp" android:src="@drawable/ic_logoutlist"/>
+                    <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="1">
+                        <customfonts.TextViewSFProDisplayMedium android:textSize="15dp" android:textColor="@color/black" android:gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_marginLeft="10dp" android:layout_marginRight="10dp" android:text="Change Password"/>
+                    </LinearLayout>
+                </LinearLayout>
+                <View android:background="@color/gray" android:layout_width="match_parent" android:layout_height="0.5dp" android:layout_marginLeft="40dp" android:layout_marginTop="5dp" android:layout_marginBottom="5dp"/>
+                <LinearLayout android:orientation="horizontal" android:id="@+id/llkendaraan" android:layout_width="match_parent" android:layout_height="40dp">
+                    <ImageView android:layout_gravity="center" android:layout_width="30dp" android:layout_height="30dp" android:src="@drawable/ic_logoutlist"/>
+                    <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="1">
+                        <customfonts.TextViewSFProDisplayMedium android:textSize="15dp" android:textColor="@color/black" android:gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_marginLeft="10dp" android:layout_marginRight="10dp" android:text="Edit Vehicle"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:background="@color/white" android:padding="15dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="8dp">
+                <LinearLayout android:orientation="horizontal" android:id="@+id/llaboutus" android:layout_width="match_parent" android:layout_height="40dp">
+                    <ImageView android:layout_gravity="center" android:layout_width="30dp" android:layout_height="30dp" android:src="@drawable/bct"/>
+                    <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="1">
+                        <customfonts.TextViewSFProDisplayMedium android:textSize="15dp" android:textColor="@color/black" android:gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_marginLeft="10dp" android:layout_marginRight="10dp" android:text="About Us"/>
+                    </LinearLayout>
+                </LinearLayout>
+                <View android:background="@color/gray" android:layout_width="match_parent" android:layout_height="0.5dp" android:layout_marginLeft="40dp" android:layout_marginTop="5dp" android:layout_marginBottom="5dp"/>
+                <LinearLayout android:orientation="horizontal" android:id="@+id/llprivacypolicy" android:layout_width="match_parent" android:layout_height="40dp">
+                    <ImageView android:layout_gravity="center" android:layout_width="30dp" android:layout_height="30dp" android:src="@drawable/ic_logoutlist"/>
+                    <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="1">
+                        <customfonts.TextViewSFProDisplayMedium android:textSize="15dp" android:textColor="@color/black" android:gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_marginLeft="10dp" android:layout_marginRight="10dp" android:text="Privacy"/>
+                    </LinearLayout>
+                </LinearLayout>
+                <View android:background="@color/gray" android:layout_width="match_parent" android:layout_height="0.5dp" android:layout_marginLeft="40dp" android:layout_marginTop="5dp" android:layout_marginBottom="5dp"/>
+                <LinearLayout android:orientation="horizontal" android:id="@+id/llshareapp" android:layout_width="match_parent" android:layout_height="40dp">
+                    <ImageView android:layout_gravity="center" android:layout_width="30dp" android:layout_height="30dp" android:src="@drawable/ic_logoutlist"/>
+                    <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="1">
+                        <customfonts.TextViewSFProDisplayMedium android:textSize="15dp" android:textColor="@color/black" android:gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_marginLeft="10dp" android:layout_marginRight="10dp" android:text="Share App"/>
+                    </LinearLayout>
+                </LinearLayout>
+                <View android:background="@color/gray" android:layout_width="match_parent" android:layout_height="0.5dp" android:layout_marginLeft="40dp" android:layout_marginTop="5dp" android:layout_marginBottom="5dp"/>
+                <LinearLayout android:orientation="horizontal" android:id="@+id/llrateapp" android:layout_width="match_parent" android:layout_height="40dp">
+                    <ImageView android:layout_gravity="center" android:layout_width="30dp" android:layout_height="30dp" android:src="@drawable/ic_ratelist"/>
+                    <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="1">
+                        <customfonts.TextViewSFProDisplayMedium android:textSize="15dp" android:textColor="@color/black" android:gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_marginLeft="10dp" android:layout_marginRight="10dp" android:text="Rate App"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:background="@color/white" android:padding="15dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="8dp">
+                <LinearLayout android:orientation="horizontal" android:id="@+id/lllogout" android:layout_width="match_parent" android:layout_height="40dp">
+                    <ImageView android:layout_gravity="center" android:layout_width="30dp" android:layout_height="30dp" android:src="@drawable/ic_logoutlist"/>
+                    <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="1">
+                        <customfonts.TextViewSFProDisplayMedium android:textSize="15dp" android:textColor="@color/black" android:gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_marginLeft="10dp" android:layout_marginRight="10dp" android:text="Logout"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+    <RelativeLayout android:id="@+id/rlprogress" android:background="@color/white" android:visibility="gone" android:clickable="true" android:layout_width="match_parent" android:layout_height="match_parent">
+        <de.hdodenhof.circleimageview.CircleImageView android:layout_width="100dp" android:layout_height="100dp" android:src="@color/white" android:layout_centerInParent="true"/>
+        <ProgressBar android:layout_width="120dp" android:layout_height="120dp" android:layout_centerInParent="true"/>
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@+id/lllogo" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_centerInParent="true">
+            <ImageView android:id="@+id/logo" android:layout_width="50dp" android:layout_height="50dp" android:src="@drawable/bct"/>
+        </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>

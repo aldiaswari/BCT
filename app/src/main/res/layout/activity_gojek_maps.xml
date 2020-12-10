@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    android:id="@+id/homefrag"
+    android:background="@color/light_gray"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <fragment
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:id="@+id/mapView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+    <LinearLayout
+        android:orientation="vertical"
+        android:id="@+id/llwallet"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:orientation="vertical"
+                android:background="@drawable/button_round_1"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_margin="10dp">
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:background="@drawable/backrouddrawable"
+                    android:paddingLeft="20dp"
+                    android:paddingTop="10dp"
+                    android:paddingRight="20dp"
+                    android:paddingBottom="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <customfonts.TextViewSFProDisplayMedium
+                        android:textSize="18dp"
+                        android:textColor="@color/white"
+                        android:gravity="center_vertical"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="Driver"/>
+                    <customfonts.TextViewSFProDisplayMedium
+                        android:textSize="18dp"
+                        android:textColor="@color/white"
+                        android:gravity="right|center_vertical|center_horizontal|center" android:id="@+id/saldo" android:visibility="visible" android:layout_width="0dp" android:layout_height="match_parent" android:layout_marginLeft="10dp" android:layout_weight="1"/>
+                </LinearLayout>
+                <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:layout_marginBottom="10dp">
+                    <RelativeLayout android:gravity="center" android:id="@+id/topup" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1">
+                        <ImageView android:id="@+id/ictopup" android:layout_width="match_parent" android:layout_height="20dp" android:src="@drawable/ic_settings_white_24dp"/>
+                        <customfonts.TextViewSFProDisplayMedium android:textSize="12dp" android:textColor="@color/white" android:gravity="center" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="5dp" android:text="Topup" android:layout_below="@+id/ictopup" android:layout_alignParentBottom="true"/>
+                    </RelativeLayout>
+                    <RelativeLayout android:gravity="center" android:id="@+id/withdraw" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1">
+                        <ImageView android:id="@+id/icwithdraw" android:layout_width="match_parent" android:layout_height="20dp" android:src="@drawable/ic_settings_white_24dp"/>
+                        <customfonts.TextViewSFProDisplayMedium android:textSize="12dp" android:textColor="@color/white" android:gravity="center" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="5dp" android:text="Withdraw" android:layout_below="@+id/icwithdraw" android:layout_alignParentBottom="true"/>
+                    </RelativeLayout>
+                    <RelativeLayout android:gravity="center" android:id="@+id/detail" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1">
+                        <ImageView android:id="@+id/icdetail" android:layout_width="match_parent" android:layout_height="20dp" android:src="@drawable/ic_settings_white_24dp"/>
+                        <customfonts.TextViewSFProDisplayMedium android:textSize="12dp" android:textColor="@color/white" android:gravity="center" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="5dp" android:text="Detail" android:layout_below="@+id/icdetail" android:layout_alignParentBottom="true"/>
+                    </RelativeLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+
+        android:gravity="left|center"
+        android:orientation="vertical"
+        android:weightSum="1.0">
+
+        <ImageView
+            android:id="@+id/ic_start"
+            android:layout_width="40dp"
+            android:visibility="gone"
+            android:layout_height="40dp"
+            android:layout_gravity="top|left"
+            android:layout_marginStart="15dip"
+            android:layout_marginLeft="15dip"
+            android:layout_marginTop="40dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:src="@drawable/ic_play" />
+
+        <ImageView
+            android:id="@+id/ic_pause"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="15.0dip"
+            android:layout_marginLeft="15.0dip"
+            android:layout_marginTop="40dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:src="@drawable/ic_pause"
+            android:visibility="gone" />
+
+        <net.colindodd.toggleimagebutton.ToggleImageButton
+            android:id="@+id/toggleButton4"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginBottom="30dp"
+
+            app:tib_drawable_off="@drawable/ic_play"
+            app:tib_drawable_on="@drawable/ic_pause" />
+
+
+    </RelativeLayout>
+
+    <LinearLayout android:gravity="center" android:orientation="vertical" android:background="@drawable/button_round_2" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="10dp" android:layout_alignParentBottom="true">
+        <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="10dp">
+            <LinearLayout android:gravity="center" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1">
+                <customfonts.Button_SF_Pro_Display_Medium android:textSize="15dp" android:textColor="@color/white" android:layout_gravity="left" android:id="@+id/maks" android:background="@drawable/selector" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="$100.00"/>
+            </LinearLayout>
+            <LinearLayout android:gravity="center" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:textAlignment="center">
+                <customfonts.Button_SF_Pro_Display_Medium android:textSize="15dp" android:textColor="@color/white" android:layout_gravity="left" android:id="@+id/onoff" android:background="@drawable/selector" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="OFF"/>
+            </LinearLayout>
+            <LinearLayout android:gravity="center" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:textAlignment="center">
+                <customfonts.Button_SF_Pro_Display_Medium android:textSize="15dp" android:textColor="@color/white" android:layout_gravity="left" android:id="@+id/autobid" android:background="@drawable/selector" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Auto BID"/>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+    <RelativeLayout
+        android:id="@+id/rlprogress"
+        android:background="@color/white"
+        android:visibility="gone"
+        android:clickable="true"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/profileimage"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@color/white"
+            android:layout_centerInParent="true"/>
+        <ProgressBar
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_centerInParent="true"/>
+        <LinearLayout
+            android:gravity="center"
+            android:orientation="vertical"
+            android:id="@+id/lllogo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true">
+            <ImageView
+                android:id="@+id/logo"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/bct"/>
+        </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>
